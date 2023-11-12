@@ -27,14 +27,14 @@ spring:
             allow-credentials: true
       routes:
         - id: backend-estudiantes-service
-          uri: lb://estudiante-service
+          uri: lb://backend-estudiantes-service
           predicates:
             - Path=/estudiante/**
         - id: backend-cuotas-service
-          uri: lb://cuotas-service
+          uri: lb://backend-cuotas-service
           predicates:
             - Path=/arancel/**, /cuotas/**, /pagos/**
         - id: backend-gestoracademico-service
-          uri: lb://gestorAcademico-service
+          uri: lb://backend-gestoracademico-service
           predicates:
             - Path=/actualizar-precios/**, /pruebas/**, /resumen-estudiante/**, /reembolso/**
