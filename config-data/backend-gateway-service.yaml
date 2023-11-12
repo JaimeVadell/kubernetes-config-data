@@ -34,7 +34,7 @@ spring:
           uri: lb://cuotas-service
           predicates:
             - Path=/arancel/**, /cuotas/**, /pagos/**
-        - id: backend-gestorAcademico-service
+        - id: backend-gestoracademico-service
           uri: lb://gestorAcademico-service
           predicates:
             - Path=/actualizar-precios/**, /pruebas/**, /resumen-estudiante/**, /reembolso/**
